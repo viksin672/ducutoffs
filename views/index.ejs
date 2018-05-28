@@ -1,0 +1,231 @@
+<% include partials/header %>
+<style media="screen">
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+label {
+  font-family: 'Dancing Script', cursive;
+  text-shadow:0px 1px;
+
+}
+.form-control{
+  font-family: 'Dancing Script', cursive;
+}
+select{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.p2{
+  font-family: cursive;
+  font-size: 20px;
+}
+
+
+
+
+
+</style>
+
+
+
+<div class="ui container" style="padding-top:0px" >
+
+
+
+<b><p style=" font-size:30px;">"Just fill out your credentials and get the list of eligible colleges of Delhi-University."</p></b>
+<p style=" font-size:30px;">Predict your desirable college in Delhi University.</p>
+<p style=" font-size:30px;">Du-Cutoff Classifier works on the basis of cut-off list provided by the <i>Delhi-University</i> , Fill  Out  Your academic detail and sort out your desirable college under DU. </p>
+
+<hr>
+
+
+      <h1 class="animated infinite bounce" style="font-family: 'Gloria Hallelujah', cursive;">Enter Your Details Here</h1>
+
+    <form class="needs-validation" novalidate action="/cutoff" method="GET" class="form-inline">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip01">First name</label>
+          <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip02">Last name</label>
+          <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltipUsername">Email</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            </div>
+            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationTooltip03">City</label>
+          <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip04">State</label>
+          <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+          <div class="invalid-tooltip">
+            Please provide a valid state.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip05">Zip</label>
+          <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+          <div class="invalid-tooltip">
+            Please provide a valid zip.
+          </div>
+        </div>
+
+<select class="custom-select">
+  <option selected>Select Board</option>
+  <option value="1">CBSE</option>
+  <option value="2">ICSE</option>
+  <option value="3">UP-Board</option>
+  <option value="3">Other</option>
+</select>
+
+<div style="padding-top:19px;">
+  <select class="custom-select" name="cat" >
+    <option selected>Select Category</option>
+    <option value="Unreserved">Unreserved</option>
+    <option value="Km">Km</option>
+    <option value="Obc">Obc</option>
+    <option value="Sc">Sc</option>
+    <option value="St">St</option>
+    <option value="Pwd">Pwd</option>
+  </select>
+</div>
+
+
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip04"></label>
+          <input name="search" type="text" class="form-control" id="validationTooltip04" placeholder="Top 4 Subjects %" required>
+          <div class="invalid-tooltip">
+            Please provide a valid state.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" style="font-family: 'Gloria Hallelujah', cursive;">Search</button>
+    </form>
+</div>
+</div>
+
+
+
+<div class="ui container">
+
+  <div class="ui yellow segment">
+<p style="font-size:20px; font-family:cursive;">"The candidates who meet the required marks, as per the first cutoff of DU 2018, in any programme offered by a college under the University of Delhi can visit the particular college campus with the necessary documents. After the verification of eligibility and academic documents, the candidates must submit the fees for the particular DU programme and complete the admission process within the scheduled two-day time."</p>
+</div>
+</div>
+<hr>
+<div class="ui container">
+  <div class="ui yellow segment">
+<h2 style="font-family:cursive;">DU 2018 Cutoff: Factors affecting DU 1st Cutoff</h2>
+<p class="p2">The University of Delhi along with its affiliated colleges determines the cutoff for DU admission. Candidates must keep in mind the following factors that are considered while producing the DU first cutoff 2018:</p>
+<p class="p2"><i class="angle double right icon"></i> Best of Four Subjects – The average of the highest marks in any four subjects of Class 12th board examination</p>
+<p class="p2"><i class="angle double right icon"></i> Programme – The undergraduate programme for which the candidate has applied for</p>
+<p class="p2"><i class="angle double right icon"></i> Number of Seats – The total number of seats offered by/ available in the programme which the candidate has applied for</p>
+<p class="p2"><i class="angle double right icon"></i> Number of Applicants – The total number of applications for the programme</p>
+<p class="p2"><i class="angle double right icon"></i> Cutoff Trend – The DU cutoff trend for the programmes over the years</p>
+</div>
+</div>
+<!-- content starts here -->
+
+<div class="ui container">
+  <div class="ui yellow segment">
+<h2 style="font-family:cursive;">DU admissions 2018: Know the admission procedure in Delhi University</h2>
+<p class="p2">DU admissions 2018: Follow these steps to apply for Delhi University.</p>
+<p>DU admissions 2018: The University of Delhi will start accepting online applications for admissions in various undergraduate courses from May 22. From last year, the admission process has been made completely online. Moreover in 2017, the university had decided to release only five cut-off lists but was forced to issue more when seats remained vacant.
+
+A lot of aspirants are curious to know how the admissions are done. Here we tell you step-wise what will happen once you apply in the colleges:</p>
+<p class="p2"><i class="angle double right icon"></i><b>Pick your course:–</b>  You have to first decide what course you are planning to pursue and the eligibility criteria. It’s better to check the cut-off of the last years to get a fair idea.</p>
+<p class="p2"><i class="angle double right icon"></i> <b>Get registered:–</b>Get registered:– You need to get registered on the official Delhi University’s website and upload all relevant documents. After the registration is over, an acknowledgement slip and form number will be generated. Take the printout of the acknowledgement slip.</p>
+<p class="p2"><i class="angle double right icon"></i> <b>Cut-off:–</b> Just fill out your credentials in the search option and get your desired college list.</p>
+<p class="p2"><i class="angle double right icon"></i> <b>Visit college:–</b> Go to the college you applied for along with the acknowledgement slip and relevant documents like Board certificates etc. Keep in mind that the admission will be done within three days of the cut-off declaration.</p>
+<p class="p2"><i class="angle double right icon"></i> <b>Verification process:–</b> Your submitted documents will be verified by the concern officials. If everything is found correct, your documents will be sent for further official purposes. Once all formalities are done, you’ll receive admission slip signed by the college principal.</p>
+<p class="p2"><i class="angle double right icon"></i> <b>Pay the fees:–</b> An online payment link will be generated and the student has to submit the college fee through within 48 hours. Once the fee is submitted, a new acknowledgement slip will be generated and the admission of the candidate in the college will be confirmed.</p>
+<p>For more details on DU-<a href="http://indianexpress.com/education/">indianexpress.com/education</a></p>
+</div>
+</div>
+
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Undergraduate Courses </h2>
+  <p>Undergraduate courses such as BA Program, BA (Honors), B Sc (Pass), B Sc (Honors), B Com , BP Ed, Bachelor of Fine Arts, and BA (Vocational Studies) are available in subjects like Hindi, physical education and sport sciences, Buddhist studies , Bengali, Assamese, Hindi journalism, Urdu, linguistics, statistics, operational research, music, Persian, philosophy, Punjabi, Sanskrit, psychology, mathematics , computer science, polymer science, home science, and fine arts. International languages such as French, Spanish, German, Arabic and Italian are also taught as undergraduate subjects. Food technology , social work, sociology, geography, political science, economics, history, and English; Regional language courses such as Sindhi, Telugu, Assamese and Manipuri; applied life sciences with agro-chemical and pest management, applied physical sciences (available in both analytical and industrial chemistry), biological sciences, instrumentation and functional Hindi and education. BA (Vocational Studies) programs are available in tourism management, office management and secretarial practice, management and marketing of insurance, small and medium enterprises, material management, human resource management and marketing management and retail business.</p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Ph D Courses  </h2>
+  <p>Ph D Courses are available in zoology, sociology, resource management & design application, psychology, linguistics, home science, genetics, fabrics & apparel science, computer science, Buddhist studies, adult continuing education & extension, social work, political science, microbiology, library information science, human development & childhood studies, geography, food & nutrition, development communication & extension, commerce, botany, anthropology, B Sc physical education & sports sciences and languages such as Hispanic, Persian, Italian, Arabic, Russian, Punjabi, German, and Sanskrit. </p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Post Graduate Programs  </h2>
+  <p>Post Graduate programs such as M A, M PE, M Sc and post graduate diplomas are also available in many streams. Some of the latest post graduate programs available in Delhi university are; M Sc food and Nutrition, M Sc resource management and design application, M Sc fabric and apparel sciences , M Sc human development and childhood studies, M Sc development communication and extension, MA applied psychology, MA history, Master of physical education, one year PG diploma in molecular and biochemical technology, post graduate in dietetics and public health nutrition, post graduate in development theory (PGDT) course, regular intensive diploma in Bulgarian Courses; and additional optional courses such as MA French, MA German , MA Hispanic and MA Italian. Post graduate diploma in computer sciences is also available in Delhi University.</p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>M Phil Courses  </h2>
+  <p>M Phil courses are available in statistics, zoology, sociology, Sanskrit, social work, Punjabi, Russian Language, Persian language, political science, library information science, linguistics, Italian, Spanish, German, French, geography, commerce, Bulgarian language, clinical psychology, botany, Buddhist studies, biotechnology, anthropology, Arabic, and biotechnology (interdisciplinary course). </p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Other Post Graduate Programs  </h2>
+  <p>Other post graduate programs available in Delhi University are M Tech chemical synthesis & process technologies, LL M, M Sc physics, M Sc microbiology, M Sc, home science specializations resource management & design application, M Sc home science specializations food & nutrition, M Sc home science specializations development communication & extension, M Sc home science specializations human development and childhood studies, M Sc home science specializations fabric and apparel science; M Sc geology M Sc genetics , M Sc food & nutrition , M Sc fabrics and apparel science, M Sc environmental studies, M Sc computer science, M Sc chemistry, M Sc anthropology, MLIS, M P Ed, MIB, MHROD, MCA, M Sc statistics, MA Russian studies, MA operational research, MA political science, MA East Asian studies, MA Buddhist studies, LLB and MA applied psychology. MA courses in Indian and International languages are available in Hindi, Urdu, Punjabi, Sanskrit, Bengali, Arabic, English, French, German, Hispanic, Italian, Japanese, and Persian. </p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Latest Under Graduate Programs  </h2>
+  <p>Similarly some of the latest under graduate programs are: bachelor of elementary education, bachelor of financial and investment analysis, bachelor of business studies, BFA fine arts, B Sc life sciences, B Sc applied physical sciences (industrial chemistry), BSC applied physical sciences (environmental science), B Sc applied physical sciences (computer science), BSC applied physical sciences (electronics), B Sc applied physical sciences (analytical chemistry), B Sc applied life sciences (agro-chemical & pest management), B Sc analytical methods: chem. & bio chem., B Sc Program applied life sciences (sericulture), B Sc (MT) radiography, B Sc (PEHES), B Sc (Honors) home science development communication & extension (DCE); B El Ed (elementary education), BLIS, B Ed, B Ed home science, B Ed special education, BA(vocational studies) and BBE.
+
+Several language courses and journalism courses are also available with BA (honors) programs.</p>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui red segment">
+  <h2>Career-Oriented Certificates and Diploma Courses  </h2>
+  <p>Delhi University offers dozens of career-oriented certificates and diploma courses along with its regular academics programs. It includes fast-paced diploma courses and intensive programs in different international languages. Apart from that it also offers programs in Tally Accounting, PG diploma in paleography, PG diploma in international marketing, PG diploma in nanotechnology, PG diploma in tourism, PG diploma in molecular and biochemical technology, PG diploma in linguistics, PG diploma in book publications, PG diploma in global business operations, PG diploma in computer applications, diploma in pharmacy, diploma in DMRD, diploma in DGO, diploma in DLO, diploma in DA, diploma in DCH and diploma in business corporate communications.
+
+Certificate courses are also available in video production, journalism, 'O' and 'A' level computer courses, CAD (computer added designing), early childhood care and education, environmental awareness, retail management and quality control and food safety. </p>
+  </div>
+</div>
+
+<div class="ui container">
+<div class="ui red segment">
+  <h2>History</h2>
+  <p>The University of Delhi was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly of the British India.[2] The University was originally to be named Prince Charles University, but Rai Kedarnath, counselor to the Chief Commissioner of Delhi and founder of Ramjas College, argued that if the university should fail, that would certainly antagonise the Prince. He suggested the name by which it is known today.[3] Hari Singh Gour served as the university's first Vice-Chancellor from 1922 to 1926. Only four colleges existed in Delhi at the time: St. Stephen's College founded in 1881, Hindu College founded in 1899, Zakir Husain Delhi College (then known as The Delhi College), founded in 1692 and Ramjas College founded in 1917, which were subsequently affiliated to the university. The university initially had two faculties (Arts and Science) and approximately 750 students.
+
+The seat of power in British India had been transferred from Calcutta to Delhi in 1911. The Viceregal Lodge Estate became the residence of the Viceroy of India until October 1933, when it was given to the University of Delhi. Since then, it has housed the office of the vice-chancellor and other offices.[4]
+
+When Sir Maurice Gwyer came to India in 1937 to serve as Chief Justice of British India, he became the Vice-Chancellor of the University of Delhi. During his time, postgraduate teaching courses were introduced and laboratories were established at the university.[5] Members of the faculty included Daulat Singh Kothari in Physics and Panchanan Maheshwari in Botany. Gwyer has been called the "maker of university". He served as Vice-Chancellor until 1950.[6]
+
+The silver jubilee year of the university in 1947 coincided with India's independence, and the national flag was hoisted in the main building for the first time by Vijayendra Kasturi Ranga Varadaraja Rao. In that year there was no convocation ceremony due to the partition of India. Instead a special ceremony was held in 1948, attended by then Prime Minister of India Jawaharlal Nehru, as well as by Lord Mountbatten, Lady Mountbatten, Abul Kalam Azad, Zakir Husain and Shanti Swaroop Bhatnagar. Twenty-five years later the golden jubilee celebrations of 1973 were attended by then Prime Minister of India Indira Gandhi, Satyajit Ray, Amrita Pritam and M. S. Subbulakshmi.</p>
+</div>
+</div>
+
+
+<% include partials/footer %>

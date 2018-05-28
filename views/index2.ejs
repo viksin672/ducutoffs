@@ -1,0 +1,547 @@
+<% include partials/header %>
+<style media="screen">
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+button.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  font-family: 'Gloria Hallelujah', cursive;
+  color:#086ea5;
+}
+
+button.accordion:after {
+  content: '\f055';
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: '\f056';
+}
+
+button.accordion:hover, button.accordion.is-open {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 0px solid whitesmoke;
+  border-right: 0px solid whitesmoke;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+</style>
+
+
+
+<div class="ui container" style="padding-top:0px" >
+
+<a href="/" style="font-family: 'Gloria Hallelujah', cursive;">Back to search</a>
+
+</div>
+<div class="ui container">
+<div class="ui yellow segment">
+<p style="font-family:cursive;font-size:20px;">Candidates seeking admission in DU programmes 2018 can check their eligibility by following the college-wise cutoff of DU 2018 given below.</p>
+</div>
+</div>
+
+<hr>
+<div class="ui container">
+<div class="ui yellow segment">
+<p style="font-family:cursive;font-size:20px;">Your classified list of colleges is below</p>
+</div>
+</div>
+<!-- content starts here -->
+ <div class="ui container" style="padding-top:20px;">
+
+
+
+   <h1 class="animated flip" style="font-family: 'Gloria Hallelujah', cursive;">Cut-Offs</h1>
+
+   <hr>
+
+   <button class="accordion">1st Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+  <thead>
+    <tr>
+      <th>CollegeName</th>
+      <th>CourseName</th>
+      <th>KM</th>
+      <th>OBC</th>
+      <th>PWD</th>
+      <th>remarks</th>
+      <th>SC</th>
+      <th>ST</th>
+      <th class="right aligned">Unreserved</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% detail.forEach(function(detail){ %>
+    <tr>
+      <td><%= detail.CollegeName %></td>
+        <td><%= detail.CourseName %></td>
+          <td><%= detail.Km %></td>
+            <td><%= detail.Obc %></td>
+              <td><%= detail.Pwd %></td>
+                <td><%= detail.Remark %></td>
+                  <td><%= detail.Sc %></td>
+                    <td><%= detail.St %></td>
+      <td class="right aligned"><%= detail.Unreserved %></td>
+    </tr>
+      <% }); %>
+  </tbody>
+</table>
+   </div>
+   </div>
+
+
+   <button class="accordion">2nd Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d2.forEach(function(d2){ %>
+         <tr>
+           <td><%= d2.CollegeName %></td>
+             <td><%= d2.CourseName %></td>
+               <td><%= d2.Km %></td>
+                 <td><%= d2.Obc %></td>
+                   <td><%= d2.Pwd %></td>
+                     <td><%= d2.Remark %></td>
+                       <td><%= d2.Sc %></td>
+                         <td><%= d2.St %></td>
+           <td class="right aligned"><%= d2.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+    </table>
+  </div>
+   </div>
+
+
+   <button class="accordion">3rd Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d3.forEach(function(d3){ %>
+         <tr>
+           <td><%= d3.CollegeName %></td>
+             <td><%= d3.CourseName %></td>
+               <td><%= d3.Km %></td>
+                 <td><%= d3.Obc %></td>
+                   <td><%= d3.Pwd %></td>
+                     <td><%= d3.Remark %></td>
+                       <td><%= d3.Sc %></td>
+                         <td><%= d3.St %></td>
+           <td class="right aligned"><%= d3.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+   <button class="accordion">4th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d4.forEach(function(d4){ %>
+         <tr>
+           <td><%= d4.CollegeName %></td>
+             <td><%= d4.CourseName %></td>
+               <td><%= d4.Km %></td>
+                 <td><%= d4.Obc %></td>
+                   <td><%= d4.Pwd %></td>
+                     <td><%= d4.Remark %></td>
+                       <td><%= d4.Sc %></td>
+                         <td><%= d4.St %></td>
+           <td class="right aligned"><%= d4.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+   <button class="accordion">5th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d5.forEach(function(d5){ %>
+         <tr>
+           <td><%= d5.CollegeName %></td>
+             <td><%= d5.CourseName %></td>
+               <td><%= d5.Km %></td>
+                 <td><%= d5.Obc %></td>
+                   <td><%= d5.Pwd %></td>
+                     <td><%= d5.Remark %></td>
+                       <td><%= d5.Sc %></td>
+                         <td><%= d5.St %></td>
+           <td class="right aligned"><%= d5.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+ </table>
+   </div>
+ </div>
+   <button class="accordion">6th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d6.forEach(function(d6){ %>
+         <tr>
+           <td><%= d6.CollegeName %></td>
+             <td><%= d6.CourseName %></td>
+               <td><%= d6.Km %></td>
+                 <td><%= d6.Obc %></td>
+                   <td><%= d6.Pwd %></td>
+                     <td><%= d6.Remark %></td>
+                       <td><%= d6.Sc %></td>
+                         <td><%= d6.St %></td>
+           <td class="right aligned"><%= d6.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+   <button class="accordion">7th Cut-Off</button>
+<div class="accordion-content">
+   <div class="table-responsive">
+   <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d7.forEach(function(d7){ %>
+         <tr>
+           <td><%= d7.CollegeName %></td>
+             <td><%= d7.CourseName %></td>
+               <td><%= d7.Km %></td>
+                 <td><%= d7.Obc %></td>
+                   <td><%= d7.Pwd %></td>
+                     <td><%= d7.Remark %></td>
+                       <td><%= d7.Sc %></td>
+                         <td><%= d7.St %></td>
+           <td class="right aligned"><%= d7.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+   <button class="accordion">8th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d8.forEach(function(d8){ %>
+         <tr>
+           <td><%= d8.CollegeName %></td>
+             <td><%= d8.CourseName %></td>
+               <td><%= d8.Km %></td>
+                 <td><%= d8.Obc %></td>
+                   <td><%= d8.Pwd %></td>
+                     <td><%= d8.Remark %></td>
+                       <td><%= d8.Sc %></td>
+                         <td><%= d8.St %></td>
+           <td class="right aligned"><%= d8.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+   <button class="accordion">9th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d9.forEach(function(d9){ %>
+         <tr>
+           <td><%= d9.CollegeName %></td>
+             <td><%= d9.CourseName %></td>
+               <td><%= d9.Km %></td>
+                 <td><%= d9.Obc %></td>
+                   <td><%= d9.Pwd %></td>
+                     <td><%= d9.Remark %></td>
+                       <td><%= d9.Sc %></td>
+                         <td><%= d9.St %></td>
+           <td class="right aligned"><%= d9.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+</div>
+   <button class="accordion">10th Cut-Off</button>
+   <div class="accordion-content">
+     <div class="table-responsive">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>CollegeName</th>
+           <th>CourseName</th>
+           <th>KM</th>
+           <th>OBC</th>
+           <th>PWD</th>
+           <th>remarks</th>
+           <th>SC</th>
+           <th>ST</th>
+           <th class="right aligned">Unreserved</th>
+         </tr>
+       </thead>
+       <tbody>
+           <% d10.forEach(function(d10){ %>
+         <tr>
+           <td><%= d10.CollegeName %></td>
+             <td><%= d10.CourseName %></td>
+               <td><%= d10.Km %></td>
+                 <td><%= d10.Obc %></td>
+                   <td><%= d10.Pwd %></td>
+                     <td><%= d10.Remark %></td>
+                       <td><%= d10.Sc %></td>
+                         <td><%= d10.St %></td>
+           <td class="right aligned"><%= d10.Unreserved %></td>
+         </tr>
+           <% }); %>
+       </tbody>
+
+</table>
+   </div>
+ </div>
+
+ <div class="ui container">
+   <div class="ui yellow segment">
+ <h2 style="font-family:cursive;">DU 2018 Cutoff: Factors affecting DU 1st Cutoff</h2>
+ <p class="p2">The University of Delhi along with its affiliated colleges determines the cutoff for DU admission. Candidates must keep in mind the following factors that are considered while producing the DU first cutoff 2018:</p>
+ <p class="p2"><i class="angle double right icon"></i> Best of Four Subjects – The average of the highest marks in any four subjects of Class 12th board examination</p>
+ <p class="p2"><i class="angle double right icon"></i> Programme – The undergraduate programme for which the candidate has applied for</p>
+ <p class="p2"><i class="angle double right icon"></i> Number of Seats – The total number of seats offered by/ available in the programme which the candidate has applied for</p>
+ <p class="p2"><i class="angle double right icon"></i> Number of Applicants – The total number of applications for the programme</p>
+ <p class="p2"><i class="angle double right icon"></i> Cutoff Trend – The DU cutoff trend for the programmes over the years</p>
+ </div>
+ </div>
+ <!-- content starts here -->
+
+ <div class="ui container">
+   <div class="ui yellow segment">
+ <h2 style="font-family:cursive;">DU admissions 2018: Know the admission procedure in Delhi University</h2>
+ <p class="p2">DU admissions 2018: Follow these steps to apply for Delhi University.</p>
+ <p>DU admissions 2018: The University of Delhi will start accepting online applications for admissions in various undergraduate courses from May 22. From last year, the admission process has been made completely online. Moreover in 2017, the university had decided to release only five cut-off lists but was forced to issue more when seats remained vacant.
+
+ A lot of aspirants are curious to know how the admissions are done. Here we tell you step-wise what will happen once you apply in the colleges:</p>
+ <p class="p2"><i class="angle double right icon"></i><b>Pick your course:–</b>  You have to first decide what course you are planning to pursue and the eligibility criteria. It’s better to check the cut-off of the last years to get a fair idea.</p>
+ <p class="p2"><i class="angle double right icon"></i> <b>Get registered:–</b>Get registered:– You need to get registered on the official Delhi University’s website and upload all relevant documents. After the registration is over, an acknowledgement slip and form number will be generated. Take the printout of the acknowledgement slip.</p>
+ <p class="p2"><i class="angle double right icon"></i> <b>Cut-off:–</b> Just fill out your credentials in the search option and get your desired college list.</p>
+ <p class="p2"><i class="angle double right icon"></i> <b>Visit college:–</b> Go to the college you applied for along with the acknowledgement slip and relevant documents like Board certificates etc. Keep in mind that the admission will be done within three days of the cut-off declaration.</p>
+ <p class="p2"><i class="angle double right icon"></i> <b>Verification process:–</b> Your submitted documents will be verified by the concern officials. If everything is found correct, your documents will be sent for further official purposes. Once all formalities are done, you’ll receive admission slip signed by the college principal.</p>
+ <p class="p2"><i class="angle double right icon"></i> <b>Pay the fees:–</b> An online payment link will be generated and the student has to submit the college fee through within 48 hours. Once the fee is submitted, a new acknowledgement slip will be generated and the admission of the candidate in the college will be confirmed.</p>
+ <p>For more details on DU-<a href="http://indianexpress.com/education/">indianexpress.com/education</a></p>
+ </div>
+ </div>
+
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Undergraduate Courses </h2>
+   <p>Undergraduate courses such as BA Program, BA (Honors), B Sc (Pass), B Sc (Honors), B Com , BP Ed, Bachelor of Fine Arts, and BA (Vocational Studies) are available in subjects like Hindi, physical education and sport sciences, Buddhist studies , Bengali, Assamese, Hindi journalism, Urdu, linguistics, statistics, operational research, music, Persian, philosophy, Punjabi, Sanskrit, psychology, mathematics , computer science, polymer science, home science, and fine arts. International languages such as French, Spanish, German, Arabic and Italian are also taught as undergraduate subjects. Food technology , social work, sociology, geography, political science, economics, history, and English; Regional language courses such as Sindhi, Telugu, Assamese and Manipuri; applied life sciences with agro-chemical and pest management, applied physical sciences (available in both analytical and industrial chemistry), biological sciences, instrumentation and functional Hindi and education. BA (Vocational Studies) programs are available in tourism management, office management and secretarial practice, management and marketing of insurance, small and medium enterprises, material management, human resource management and marketing management and retail business.</p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Ph D Courses  </h2>
+   <p>Ph D Courses are available in zoology, sociology, resource management & design application, psychology, linguistics, home science, genetics, fabrics & apparel science, computer science, Buddhist studies, adult continuing education & extension, social work, political science, microbiology, library information science, human development & childhood studies, geography, food & nutrition, development communication & extension, commerce, botany, anthropology, B Sc physical education & sports sciences and languages such as Hispanic, Persian, Italian, Arabic, Russian, Punjabi, German, and Sanskrit. </p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Post Graduate Programs  </h2>
+   <p>Post Graduate programs such as M A, M PE, M Sc and post graduate diplomas are also available in many streams. Some of the latest post graduate programs available in Delhi university are; M Sc food and Nutrition, M Sc resource management and design application, M Sc fabric and apparel sciences , M Sc human development and childhood studies, M Sc development communication and extension, MA applied psychology, MA history, Master of physical education, one year PG diploma in molecular and biochemical technology, post graduate in dietetics and public health nutrition, post graduate in development theory (PGDT) course, regular intensive diploma in Bulgarian Courses; and additional optional courses such as MA French, MA German , MA Hispanic and MA Italian. Post graduate diploma in computer sciences is also available in Delhi University.</p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>M Phil Courses  </h2>
+   <p>M Phil courses are available in statistics, zoology, sociology, Sanskrit, social work, Punjabi, Russian Language, Persian language, political science, library information science, linguistics, Italian, Spanish, German, French, geography, commerce, Bulgarian language, clinical psychology, botany, Buddhist studies, biotechnology, anthropology, Arabic, and biotechnology (interdisciplinary course). </p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Other Post Graduate Programs  </h2>
+   <p>Other post graduate programs available in Delhi University are M Tech chemical synthesis & process technologies, LL M, M Sc physics, M Sc microbiology, M Sc, home science specializations resource management & design application, M Sc home science specializations food & nutrition, M Sc home science specializations development communication & extension, M Sc home science specializations human development and childhood studies, M Sc home science specializations fabric and apparel science; M Sc geology M Sc genetics , M Sc food & nutrition , M Sc fabrics and apparel science, M Sc environmental studies, M Sc computer science, M Sc chemistry, M Sc anthropology, MLIS, M P Ed, MIB, MHROD, MCA, M Sc statistics, MA Russian studies, MA operational research, MA political science, MA East Asian studies, MA Buddhist studies, LLB and MA applied psychology. MA courses in Indian and International languages are available in Hindi, Urdu, Punjabi, Sanskrit, Bengali, Arabic, English, French, German, Hispanic, Italian, Japanese, and Persian. </p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Latest Under Graduate Programs  </h2>
+   <p>Similarly some of the latest under graduate programs are: bachelor of elementary education, bachelor of financial and investment analysis, bachelor of business studies, BFA fine arts, B Sc life sciences, B Sc applied physical sciences (industrial chemistry), BSC applied physical sciences (environmental science), B Sc applied physical sciences (computer science), BSC applied physical sciences (electronics), B Sc applied physical sciences (analytical chemistry), B Sc applied life sciences (agro-chemical & pest management), B Sc analytical methods: chem. & bio chem., B Sc Program applied life sciences (sericulture), B Sc (MT) radiography, B Sc (PEHES), B Sc (Honors) home science development communication & extension (DCE); B El Ed (elementary education), BLIS, B Ed, B Ed home science, B Ed special education, BA(vocational studies) and BBE.
+
+ Several language courses and journalism courses are also available with BA (honors) programs.</p>
+   </div>
+ </div>
+ <div class="ui container">
+ <div class="ui red segment">
+   <h2>Career-Oriented Certificates and Diploma Courses  </h2>
+   <p>Delhi University offers dozens of career-oriented certificates and diploma courses along with its regular academics programs. It includes fast-paced diploma courses and intensive programs in different international languages. Apart from that it also offers programs in Tally Accounting, PG diploma in paleography, PG diploma in international marketing, PG diploma in nanotechnology, PG diploma in tourism, PG diploma in molecular and biochemical technology, PG diploma in linguistics, PG diploma in book publications, PG diploma in global business operations, PG diploma in computer applications, diploma in pharmacy, diploma in DMRD, diploma in DGO, diploma in DLO, diploma in DA, diploma in DCH and diploma in business corporate communications.
+
+ Certificate courses are also available in video production, journalism, 'O' and 'A' level computer courses, CAD (computer added designing), early childhood care and education, environmental awareness, retail management and quality control and food safety. </p>
+   </div>
+ </div>
+<a href="/" style="font-family: 'Gloria Hallelujah', cursive;">Back to search</a>
+
+ </div>
+
+ <script type="text/javascript">
+ var accordions = document.getElementsByClassName("accordion");
+
+ for (var i = 0; i < accordions.length; i++) {
+   accordions[i].onclick = function() {
+     this.classList.toggle('is-open');
+
+     var content = this.nextElementSibling;
+     if (content.style.maxHeight) {
+       // accordion is currently open, so close it
+       content.style.maxHeight = null;
+     } else {
+       // accordion is currently closed, so open it
+       content.style.maxHeight = content.scrollHeight + "px";
+     }
+   }
+ }
+
+ </script>
+
+<% include partials/footer %>
