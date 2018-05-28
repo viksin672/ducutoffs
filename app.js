@@ -3,16 +3,16 @@ var express = require("express"),
     bodyParser = require("body-parser");
 
 
-var    D2  = require("./Data/d2.json"),
-      D3  = require("./Data/d3.json"),
-      D4  = require("./Data/d4.json"),
-      D5  = require("./Data/d5.json"),
-      D6  = require("./Data/d6.json"),
-      D7  = require("./Data/d7.json"),
-      D8  = require("./Data/d8.json"),
-      D9  = require("./Data/d9.json"),
-      D10  = require("./Data/d10.json"),
-      Detail  = require("./Data/detail.json");
+var    D2  = require("./Data/D2.json"),
+      D3  = require("./Data/D3.json"),
+      D4  = require("./Data/D4.json"),
+      D5  = require("./Data/D5.json"),
+      D6  = require("./Data/D6.json"),
+      D7  = require("./Data/D7.json"),
+      D8  = require("./Data/D8.json"),
+      D9  = require("./Data/D9.json"),
+      D10  = require("./Data/D10.json"),
+      Detail  = require("./Data/Detail.json");
 
 
 
@@ -45,16 +45,17 @@ app.get("/cutoff", function(req, res){
       const search = req.query.search + 1 ;
       const cat = req.query.cat;
       console.log(search);
-      var   D2  = require("./Data/d2.json"),
-            D3  = require("./Data/d3.json"),
-            D4  = require("./Data/d4.json"),
-            D5  = require("./Data/d5.json"),
-            D6  = require("./Data/d6.json"),
-            D7  = require("./Data/d7.json"),
-            D8  = require("./Data/d8.json"),
-            D9  = require("./Data/d9.json"),
-            D10  = require("./Data/d10.json"),
-            Detail  = require("./Data/detail.json");
+      var    D2  = require("./Data/D2.json"),
+            D3  = require("./Data/D3.json"),
+            D4  = require("./Data/D4.json"),
+            D5  = require("./Data/D5.json"),
+            D6  = require("./Data/D6.json"),
+            D7  = require("./Data/D7.json"),
+            D8  = require("./Data/D8.json"),
+            D9  = require("./Data/D9.json"),
+            D10  = require("./Data/D10.json"),
+            Detail  = require("./Data/Detail.json");
+
       const regex = new RegExp(escapeRegex(req.query.search), 'gi');
        if (cat == "Km") {
 
