@@ -550,7 +550,6 @@ function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 
-
-app.listen(50000,function(){
-  console.log("server started at 50000");
+app.listen(process.env.PORT || 5000,function() {
+  console.log("duCutoffs server started!!")
 });
